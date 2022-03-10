@@ -1,0 +1,34 @@
+.tabs button {
+    margin-right: 10px;
+}
+
+.tabs {
+    margin-bottom: 10px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.stats-modal {
+    background-color: white;
+    padding: 20px;
+    border: 2px solid black;
+
+    h1 {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+
+        .fa-times:hover {
+            color: darkred;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.data-table {
+
+    border-spacing: inherit;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9em;
+
+    th.title {
+        cursor: pointer;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        background-color: var(--main-color);
+        color: white;
+    }
+
+    th, td {
+        text-align: center;
+        white-space: nowrap;
+        padding: 7px;
+        cursor: default;
+    }
+
+    tbody {
+
+        tr {
+            background-color: var(--row-color);
+        }
+
+        tr:nth-child(odd)
+        {
+            background-color: var(--odd-row-color);//, #f8f9fa);
+            &:hover {
+                background-color: var(--hover-color, var(--main-color));
+                color: white;
+            }
+        }
+
+        tr:nth-child(even)
+        {
+            background-color: var(--even-row-color);//, #dee2e6);
+            &:hover {
+                background-color: var(--hover-color, var(--main-color));
+                color: white;
+            }
+        }
+    }
+
+    .filter {
+        width: 100%;
+        text-align: center;
+    }
+
+    .filter:focus {
+        width: fit-content;
+    }
+
+    .sort-arrow {
+        font-size: 12px;
+        padding-left: 4px;
+    }
+}
+
+.data-table-wrapper {
+    flex-shrink: 1;
+    min-height: 0;
+    height: 100%;
+    overflow: auto;
+    --main-color: #0ca678;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--main-color);
+    }
+}
